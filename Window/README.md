@@ -94,7 +94,7 @@ Invoke-ACLScanner –ResolveGUIDs
 
 ```
 
-``` Enumerate Domain Trusts
+```Enumerate Domain Trusts
 
 Get-NetDomainTrust
 Get-NetDomainTrust –Domain cyberwarfare.corp
@@ -107,7 +107,7 @@ Get-NetForestDomain –Verbose
 Get-NetForest -Verbose
 
 ```
-``` Find computer sessions where current user has local admin access
+```Find computer sessions where current user has local admin access
 
 Find-LocalAdminAccess -Verbose
 
