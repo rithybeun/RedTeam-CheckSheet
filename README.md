@@ -92,5 +92,15 @@ SMB LSA
 
 
 
-# RedTeam-CheckSheet
+# Error NTP with kerberous Attack AD
+
+	sudo apt update
+	sudo apt install ntpdate
+	timedatectl 
+	timedatectl set-ntp true
+	reboot
+	sudo systemctl start ntp
+	sudo systemctl status ntp
+
+
 # RedTeam-CheckSheet
