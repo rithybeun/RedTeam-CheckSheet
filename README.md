@@ -128,3 +128,21 @@ SMB LSA
 	SPNSuffixes           : {}
 	UPNSuffixes           : {}
 
+
+
+	PS C:\Windows\Temp> net localgroup Administrators 
+	net localgroup Administrators
+	Alias name     Administrators
+	Comment        Administrators have complete and unrestricted access to the computer/domain
+	
+	Members
+	
+	-------------------------------------------------------------------------------
+	Administrator
+	corpmngr
+
+
+ 	** net user /dom
+  	** net group /dom
+
+
