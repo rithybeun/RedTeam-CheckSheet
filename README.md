@@ -110,7 +110,7 @@ SMB LSA
 # AD PowerView
 
 	
-	Get-AdForest 
+	# Get-AdForest 
 	
 	
 	ApplicationPartitions : {DC=DomainDnsZones,DC=warfare,DC=corp, DC=DomainDnsZones,DC=child,DC=warfare,DC=corp, 
