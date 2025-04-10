@@ -148,6 +148,30 @@ SMB LSA
 
 
 	# Get-ADTrust -Filter *
+	Direction               : BiDirectional -> communication Both ways
+	DisallowTransivity      : False
+	DistinguishedName       : CN=warfare.corp,CN=System,DC=child,DC=warfare,DC=corp
+	ForestTransitive        : False
+	IntraForest             : True
+	IsTreeParent            : False
+	IsTreeRoot              : False
+	Name                    : warfare.corp
+	ObjectClass             : trustedDomain
+	ObjectGUID              : 59bbc30c-d218-495f-a48c-b728a42eb732
+	SelectiveAuthentication : False
+	SIDFilteringForestAware : False
+	SIDFilteringQuarantined : False
+	Source                  : DC=child,DC=warfare,DC=corp
+	Target                  : warfare.corp
+	TGTDelegation           : False
+	TrustAttributes         : 32
+	TrustedPolicy           : 
+	TrustingPolicy          : 
+	TrustType               : Uplevel
+	UplevelOnly             : False
+	UsesAESKeys             : False
+	UsesRC4Encryption       : False
+
 
  	** net user /dom
   	** net group /dom
