@@ -155,13 +155,13 @@ SMB LSA
 	IntraForest             : True
 	IsTreeParent            : False
 	IsTreeRoot              : False
-	Name                    : warfare.corp
+	Name                    : warfare.corp -> parent domain name
 	ObjectClass             : trustedDomain
 	ObjectGUID              : 59bbc30c-d218-495f-a48c-b728a42eb732
 	SelectiveAuthentication : False
 	SIDFilteringForestAware : False
 	SIDFilteringQuarantined : False
-	Source                  : DC=child,DC=warfare,DC=corp
+	Source                  : DC=child,DC=warfare,DC=corp -> child.warfare.corp
 	Target                  : warfare.corp
 	TGTDelegation           : False
 	TrustAttributes         : 32
@@ -172,6 +172,18 @@ SMB LSA
 	UsesAESKeys             : False
 	UsesRC4Encryption       : False
 
+
+
+	# Get-DomainTrust -Filter *
+	
+	
+	SourceName      : child.warfare.corp -> for our source
+	TargetName      : warfare.corp
+	TrustType       : WINDOWS_ACTIVE_DIRECTORY
+	TrustAttributes : WITHIN_FOREST
+	TrustDirection  : Bidirectional -> communicate
+	WhenCreated     : 1/17/2025 2:30:03 PM
+	WhenChanged     : 4/10/2025 12:30:34 PM
 
  	** net user /dom
   	** net group /dom
