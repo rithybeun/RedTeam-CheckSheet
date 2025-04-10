@@ -107,4 +107,24 @@ SMB LSA
 	sudo systemctl status ntp
 
 
-# RedTeam-CheckSheet
+# AD PowerView
+
+	
+	Get-AdForest 
+	
+	
+	ApplicationPartitions : {DC=DomainDnsZones,DC=warfare,DC=corp, DC=DomainDnsZones,DC=child,DC=warfare,DC=corp, 
+	                        DC=ForestDnsZones,DC=warfare,DC=corp}
+	CrossForestReferences : {}
+	DomainNamingMaster    : dc01.warfare.corp
+	Domains               : {child.warfare.corp, warfare.corp}
+	ForestMode            : Windows2016Forest
+	GlobalCatalogs        : {dc01.warfare.corp, cdc.child.warfare.corp}
+	Name                  : warfare.corp
+	PartitionsContainer   : CN=Partitions,CN=Configuration,DC=warfare,DC=corp
+	RootDomain            : warfare.corp
+	SchemaMaster          : dc01.warfare.corp
+	Sites                 : {Default-First-Site-Name}
+	SPNSuffixes           : {}
+	UPNSuffixes           : {}
+
