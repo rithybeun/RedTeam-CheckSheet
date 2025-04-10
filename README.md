@@ -185,6 +185,49 @@ SMB LSA
 	WhenCreated     : 1/17/2025 2:30:03 PM
 	WhenChanged     : 4/10/2025 12:30:34 PM
 
+	 PS C:\Windows\Temp> Get-ADDomain -Server child.warfare.corp
+	
+	
+	DNSRoot                            : child.warfare.corp
+	DomainControllersContainer         : OU=Domain Controllers,DC=child,DC=warfare,DC=corp
+	DomainMode                         : Windows2016Domain
+	DomainSID                          : S-1-5-21-3754860944-83624914-1883974761 -> need it
+	
+	Name                               : child -> verify local host
+	NetBIOSName                        : CHILD  -> verify local host
+	ObjectClass                        : domainDNS
+	ObjectGUID                         : d264979f-7dfb-4208-9498-7f288803278c
+	ParentDomain                       : warfare.corp -> Parent Doamin
+	PDCEmulator                        : cdc.child.warfare.corp
+	PublicKeyRequiredPasswordRolling   : True
+	QuotasContainer                    : CN=NTDS Quotas,DC=child,DC=warfare,DC=corp
+	ReadOnlyReplicaDirectoryServers    : {}
+	ReplicaDirectoryServers            : {cdc.child.warfare.corp}
+	RIDMaster                          : cdc.child.warfare.corp
+	SubordinateReferences              : {DC=DomainDnsZones,DC=child,DC=warfare,DC=corp}
+	SystemsContainer                   : CN=System,DC=child,DC=warfare,DC=corp
+	UsersContainer                     : CN=Users,DC=child,DC=warfare,DC=corp
+
+
+	** Get-DomainSID -Domain warfare.corp  
+ 
+	Get-DomainSID -Domain warfare.corp                                     
+	S-1-5-21-3375883379-808943238-3239386119
+
+ 	
+  	** Get-NetForestDomain                                   
+
+	Forest                  : warfare.corp                                 
+	DomainControllers       : {cdc.child.warfare.corp}                    
+	Parent                  : warfare.corp                                 
+	PdcRoleOwner            : cdc.child.warfare.corp                       
+	Forest                  : warfare.corp
+	DomainControllers       : {dc01.warfare.corp}
+	Children                : {child.warfare.corp}
+	InfrastructureRoleOwner : dc01.warfare.corp
+	Name                    : warfare.corp
+
+
  	** net user /dom
   	** net group /dom
 
