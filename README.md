@@ -147,6 +147,8 @@ SMB LSA
 	corpmngr
 
 
+	# Get-ADTrust -Filter *
+
  	** net user /dom
   	** net group /dom
 
