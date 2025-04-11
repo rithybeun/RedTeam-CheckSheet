@@ -16,6 +16,12 @@
 	PS C:\>Set-ADAccountPassword -Identity "AD.Account.Username.Of.Target" -Reset -NewPassword $Password
 
 	***** Note: If you get an Access Denied error, your permissions have not yet propagated through the domain. This can take up to 10 minutes. The best approach is to terminate your SSH or RDP session, take a quick break, and then reauthenticate and try again. You could also run gpupdate /force and then disconnect and reconnect, which in certain cases will cause the synchronisation to happen faster.
+
+  	HTTP - Used for web applications to allow pass-through authentication using AD credentials.
+CIFS - Common Internet File System is used for file sharing that allows delegation of users to shares.
+LDAP - Used to delegate to the LDAP service for actions such as resetting a user's password.
+HOST - Allows delegation of account for all activities on the host.
+MSSQL - Allows delegation of user accounts to the SQL service for pass-through authentication to databases.
     
 # Pivoting
 
